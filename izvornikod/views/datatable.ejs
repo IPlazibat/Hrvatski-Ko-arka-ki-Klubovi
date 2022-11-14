@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hrvatski košarkaški klubovi</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/styles/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+
+        <script>
+            $(document).ready(function() {
+                $("#searchForm").on("submit", function(event) {
+                    event.preventDefault();
+                    let searchValue = $("#search").val();
+                    let attributeValue = $("#attribute").val();
+
+                    $.ajax({
+                        url: "/datatable",
+                        method: "POST", 
+                        contentType: "application/json", 
+                        data: JSON.stringify(
+                            {
+                                search: searchValue, 
+                                attribute: attributeValue
+                            }
+                        ), 
+                        success: function(res) {
+                            $("tbody").html($(res.response));
+                        }
+                    })
+                })
+            });
+        </script>
+
+        <nav class="App-navbar">
+            <ul class="nav justify-content-end container">
+                <a href="/" class="btn btn-outline-light circle"> Home </a>
+                <a href="/datatable"  class="btn btn-outline-light circle"> Datatable </a>
+            </ul>
+        </nav>
+
+        <form id="searchForm">
+            <div>
+                <label for="search">Polje za pretragu </label>
+                <input class="form-control" id="search" type="text" placeholder="Unesite vrijednost">    
+            </div>
+            <div class="form-group col-auto my-1 odabirAtributa">
+                <select class="form-control" id="attribute">
+                    <option selected value="">Odaberite polje za pretragu</option>
+                    <option value="wildcard">Sva polja (wildcard)</option>
+                    <option value="nazivkluba">Naziv kluba</option>
+                    <option value="godinaosnutka">Godina osnutka</option>
+                    <option value="imedvorane">Ime dvorane</option>
+                    <option value="adresa">Adresa</option>
+                    <option value="email">Email</option>
+                    <option value="urlstranice">URL stranice</option>
+                    <option value="ime">Ime</option>
+                    <option value="prezime">Prezime</option>
+                    <option value="visina">Visina</option>
+                    <option value="dob">Dob</option>
+                    <option value="brojdresa">Broj dresa</option>
+                </select>    
+            </div>
+            <input type="submit" value="Pretraži" class="btn btn-primary btnSubmit">
+        </form>
+        
+        <div class="flex-column">
+            <a href="/data/csvfilter.csv" download="csvfilter.csv" class="btn btn-lg btn-secondary">Download as CSV</a>
+            <a href="/data/jsonfilter.json" download="jsonfilter.json" class="btn btn-lg btn-secondary">Download as JSON</a>    
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Naziv kluba</th>
+                    <th>Godina osnutka</th>
+                    <th>Ime dvorane</th>
+                    <th>Adresa</th>
+                    <th>Email</th>
+                    <th>URL stranice</th>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Visina</th>
+                    <th>Dob</th>
+                    <th>Broj dresa</th>
+                </tr>
+            </thead>
+
+            <tbody>      
+                <% for(const row of rows) { %>
+                    <tr>
+                        <td> <%= row.nazivkluba %> </td>
+                        <td> <%= row.godinaosnutka %> </td>
+                        <td> <%= row.imedvorane %> </td>
+                        <td> <%= row.adresa %> </td>
+                        <td> <%= row.email %> </td>
+                        <td> <%= row.url_stranice %> </td>
+                        <td> <%= row.ime %> </td>
+                        <td> <%= row.prezime %> </td>
+                        <td> <%= row.visina %> </td>
+                        <td> <%= row.dob %> </td>
+                        <td> <%= row.brojdresa %> </td>
+                    </tr>
+                <% } %>   
+            </tbody>
+        </table>
+    </body>
+</html>

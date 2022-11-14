@@ -1,0 +1,786 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://or.fer.unizg.hr/hrvKosarkaskiKlubovi.json",
+    "type": "array",
+    "default": [],
+    "title": "Hrvatski Košarkaški Klubovi",
+    "description": "Dataset hrvatskih košarkaških klubova",
+    "items": {
+        "type": "object",
+        "title": "Hrvatski Košarkaški Klub",
+        "description": "Objekt koji sadrži sve podatke o jednom klubu",
+        "required": [
+            "nazivkluba",
+            "godinaosnutka",
+            "imedvorane",
+            "adresa",
+            "email",
+            "url_stranice",
+            "igrači"
+        ],
+        "properties": {
+            "nazivkluba": {
+                "type": "string",
+                "title": "Naziv Kluba",
+                "examples": [
+                    "Alkar",
+                    "Cibona",
+                    "Šibenka",
+                    "Furnir",
+                    "Zadar",
+                    "Zabok",
+                    "Cedevita",
+                    "Gorica",
+                    "Bosco",
+                    "Škrljevo"
+                ]
+            },
+            "godinaosnutka": {
+                "type": "integer",
+                "title": "Godina osnutka",
+                "examples": [
+                    1967,
+                    1935,
+                    1972,
+                    1994,
+                    1954,
+                    1998,
+                    1976,
+                    1977,
+                    1999,
+                    2001
+                ]
+            },
+            "imedvorane": {
+                "type": "string",
+                "title": "Ime dvorane",
+                "examples": [
+                    "GŠD Ivica Glavan",
+                    "Košarkaški centar Dražen Petrović",
+                    "SD Baldekin",
+                    "SD Dubrava",
+                    "Dvorana Krešimira Ćosića",
+                    "GSD Zabok",
+                    "Dom Sportova",
+                    "GSD Velika Gorica",
+                    "ŠSD Boško Božić Pepsi",
+                    "SD Mavrinci"
+                ]
+            },
+            "adresa": {
+                "type": "string",
+                "title": "Adresa",
+                "examples": [
+                    "Put Piketa 25",
+                    "Savska 30",
+                    "Ulica Stjepana Radića 44",
+                    "Ul. Gjure Prejca 2",
+                    "Splitska ul. 3",
+                    "Janka Tomića 1",
+                    "Trg Krešimira Ćosića 11",
+                    "Rakarska ul. 19",
+                    "Trnsko ul. 21D",
+                    "Mavrinci 19a"
+                ]
+            },
+            "email": {
+                "type": "string",
+                "title": "Email",
+                "examples": [
+                    "kkalkar@hks.hr",
+                    "kkcibona@hks.hr",
+                    "kksibenkar@hks.hr",
+                    "kkfurnir@hks.hr",
+                    "kkzadar@hks.hr",
+                    "kkzabok@hks.hr",
+                    "kkcedevita@hks.hr",
+                    "kkgorica@hks.hr",
+                    "kkbosco@hks.hr",
+                    "kkskrljevo@hks.hr"
+                ]
+            },
+            "url_stranice": {
+                "type": "string",
+                "title": "URL_stranice",
+                "examples": [
+                    "https://alkar.hr/",
+                    "https://www.cibona.com/",
+                    "https://sibenka.hr/",
+                    "https://furnir.hr/",
+                    "https://kkzadar.hr/",
+                    "https://kkzabok.hr/",
+                    "https://cedevita.hr/",
+                    "https://gorica.hr/",
+                    "https://bosco.hr/",
+                    "https://skrljevo.hr/"
+                ]
+            },
+            "igrači": {
+                "type": "array",
+                "title": "Igrači",
+                "description": "Podaci o igračima",
+                "items": {
+                    "type": "object",
+                    "title": "Igrač",
+                    "description": "Objekt koji sadrži sve podatke o jednom igraču",
+                    "required": [
+                        "ime",
+                        "prezime",
+                        "dob",
+                        "visina",
+                        "brojdresa"
+                    ],
+                    "properties": {
+                        "ime": {
+                            "type": "string",
+                            "title": "Ime",
+                            "examples": [
+                                "Duje",
+                                "Stipe",
+                                "Krešimir",
+                                "Ivan",
+                                "Juraj",
+                                "Frane",
+                                "Luka",
+                                "Jarviss",
+                                "Tomislav",
+                                "Josip"
+                            ]
+                        },
+                        "prezime": {
+                            "type": "string",
+                            "title": "Prezime",
+                            "examples": [
+                                "Putnik",
+                                "Polutak",
+                                "Radovčić",
+                                "Perasović",
+                                "Pleadin",
+                                "Antić",
+                                "Rađa",
+                                "Božić",
+                                "Kučan",
+                                "Garrett",
+                                "Petrović",
+                                "Majcunić",
+                                "Krajnović",
+                                "Barnjak"
+                            ]
+                        },
+                        "dob": {
+                            "type": "integer",
+                            "title": "Dob",
+                            "examples": [
+                                21,
+                                28,
+                                23,
+                                20,
+                                22,
+                                32,
+                                25,
+                                29,
+                                27,
+                                31,
+                                37,
+                                24,
+                                18
+                            ]
+                        },
+                        "visina": {
+                            "type": "integer",
+                            "title": "Visina",
+                            "examples": [
+                                203,
+                                210,
+                                188,
+                                200,
+                                198,
+                                205,
+                                206,
+                                180,
+                                201,
+                                202,
+                                194,
+                                196,
+                                190
+                            ]
+                        },
+                        "brojdresa": {
+                            "type": "integer",
+                            "title": "Broj Dresa",
+                            "examples": [
+                                6,
+                                10,
+                                3,
+                                7,
+                                14,
+                                21,
+                                29,
+                                4,
+                                17,
+                                18,
+                                8
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "ime": "Duje",
+                        "prezime": "Putnik",
+                        "dob": 21,
+                        "visina": 203,
+                        "brojdresa": 6
+                    },
+                    {
+                        "ime": "Stipe",
+                        "prezime": "Polutak",
+                        "dob": 28,
+                        "visina": 210,
+                        "brojdresa": 10
+                    },
+                    {
+                        "ime": "Krešimir",
+                        "prezime": "Radovčić",
+                        "dob": 23,
+                        "visina": 188,
+                        "brojdresa": 3
+                    },
+                    {
+                        "ime": "Ivan",
+                        "prezime": "Perasović",
+                        "dob": 20,
+                        "visina": 200,
+                        "brojdresa": 6
+                    },
+                    {
+                        "ime": "Juraj",
+                        "prezime": "Pleadin",
+                        "dob": 22,
+                        "visina": 198,
+                        "brojdresa": 7
+                    },
+                    {
+                        "ime": "Frane",
+                        "prezime": "Antić",
+                        "dob": 32,
+                        "visina": 205,
+                        "brojdresa": 14
+                    },
+                    {
+                        "ime": "Duje",
+                        "prezime": "Rađa",
+                        "dob": 25,
+                        "visina": 203,
+                        "brojdresa": 21
+                    },
+                    {
+                        "ime": "Luka",
+                        "prezime": "Božić",
+                        "dob": 29,
+                        "visina": 206,
+                        "brojdresa": 29
+                    },
+                    {
+                        "ime": "Ivan",
+                        "prezime": "Kučan",
+                        "dob": 27,
+                        "visina": 180,
+                        "brojdresa": 4
+                    },
+                    {
+                        "ime": "Jarviss",
+                        "prezime": "Garrett",
+                        "dob": 31,
+                        "visina": 201,
+                        "brojdresa": 17
+                    },
+                    {
+                        "ime": "Tomislav",
+                        "prezime": "Petrović",
+                        "dob": 37,
+                        "visina": 202,
+                        "brojdresa": 10
+                    },
+                    {
+                        "ime": "Ivan",
+                        "prezime": "Majcunić",
+                        "dob": 24,
+                        "visina": 194,
+                        "brojdresa": 6
+                    },
+                    {
+                        "ime": "Luka",
+                        "prezime": "Krajnović",
+                        "dob": 18,
+                        "visina": 196,
+                        "brojdresa": 18
+                    },
+                    {
+                        "ime": "Josip",
+                        "prezime": "Barnjak",
+                        "dob": 24,
+                        "visina": 190,
+                        "brojdresa": 8
+                    }]
+                },
+                "examples": [
+                    [{
+                        "ime": "Duje",
+                        "prezime": "Putnik",
+                        "dob": 21,
+                        "visina": 203,
+                        "brojdresa": 6
+                    },
+                    {
+                        "ime": "Stipe",
+                        "prezime": "Polutak",
+                        "dob": 28,
+                        "visina": 210,
+                        "brojdresa": 10
+                    }],
+                    [{
+                        "ime": "Krešimir",
+                        "prezime": "Radovčić",
+                        "dob": 23,
+                        "visina": 188,
+                        "brojdresa": 3
+                    },
+                    {
+                        "ime": "Ivan",
+                        "prezime": "Perasović",
+                        "dob": 20,
+                        "visina": 200,
+                        "brojdresa": 6
+                    }],
+                    [{
+                        "ime": "Juraj",
+                        "prezime": "Pleadin",
+                        "dob": 22,
+                        "visina": 198,
+                        "brojdresa": 7
+                    },
+                    {
+                        "ime": "Frane",
+                        "prezime": "Antić",
+                        "dob": 32,
+                        "visina": 205,
+                        "brojdresa": 14
+                    }],
+                    [{
+                        "ime": "Duje",
+                        "prezime": "Rađa",
+                        "dob": 25,
+                        "visina": 203,
+                        "brojdresa": 21
+                    }],
+                    [{
+                        "ime": "Luka",
+                        "prezime": "Božić",
+                        "dob": 29,
+                        "visina": 206,
+                        "brojdresa": 29
+                    }],
+                    [{
+                        "ime": "Ivan",
+                        "prezime": "Kučan",
+                        "dob": 27,
+                        "visina": 180,
+                        "brojdresa": 4
+                    },
+                    {
+                        "ime": "Jarviss",
+                        "prezime": "Garrett",
+                        "dob": 31,
+                        "visina": 201,
+                        "brojdresa": 17
+                    }],
+                    [{
+                        "ime": "Tomislav",
+                        "prezime": "Petrović",
+                        "dob": 37,
+                        "visina": 202,
+                        "brojdresa": 10
+                    }],
+                    [{
+                        "ime": "Ivan",
+                        "prezime": "Majcunić",
+                        "dob": 24,
+                        "visina": 194,
+                        "brojdresa": 6
+                    }],
+                    [{
+                        "ime": "Luka",
+                        "prezime": "Krajnović",
+                        "dob": 18,
+                        "visina": 196,
+                        "brojdresa": 18
+                    }],
+                    [{
+                        "ime": "Josip",
+                        "prezime": "Barnjak",
+                        "dob": 24,
+                        "visina": 190,
+                        "brojdresa": 8
+                    }]
+                ]
+            }
+        },
+        "examples": [{
+            "nazivkluba": "Alkar",
+            "godinaosnutka": 1967,
+            "imedvorane": "GŠD Ivica Glavan",
+            "adresa": "Put Piketa 25",
+            "email": "kkalkar@hks.hr",
+            "url_stranice": "https://alkar.hr/",
+            "igrači": [{
+                "ime": "Duje",
+                "prezime": "Putnik",
+                "dob": 21,
+                "visina": 203,
+                "brojdresa": 6
+            },
+            {
+                "ime": "Stipe",
+                "prezime": "Polutak",
+                "dob": 28,
+                "visina": 210,
+                "brojdresa": 10
+            }]
+        },
+        {
+            "nazivkluba": "Cibona",
+            "godinaosnutka": 1935,
+            "imedvorane": "Košarkaški centar Dražen Petrović",
+            "adresa": "Savska 30",
+            "email": "kkcibona@hks.hr",
+            "url_stranice": "https://www.cibona.com/",
+            "igrači": [{
+                "ime": "Krešimir",
+                "prezime": "Radovčić",
+                "dob": 23,
+                "visina": 188,
+                "brojdresa": 3
+            },
+            {
+                "ime": "Ivan",
+                "prezime": "Perasović",
+                "dob": 20,
+                "visina": 200,
+                "brojdresa": 6
+            }]
+        },
+        {
+            "nazivkluba": "Šibenka",
+            "godinaosnutka": 1972,
+            "imedvorane": "SD Baldekin",
+            "adresa": "Ulica Stjepana Radića 44",
+            "email": "kksibenkar@hks.hr",
+            "url_stranice": "https://sibenka.hr/",
+            "igrači": [{
+                "ime": "Juraj",
+                "prezime": "Pleadin",
+                "dob": 22,
+                "visina": 198,
+                "brojdresa": 7
+            },
+            {
+                "ime": "Frane",
+                "prezime": "Antić",
+                "dob": 32,
+                "visina": 205,
+                "brojdresa": 14
+            }]
+        },
+        {
+            "nazivkluba": "Furnir",
+            "godinaosnutka": 1994,
+            "imedvorane": "SD Dubrava",
+            "adresa": "Ul. Gjure Prejca 2",
+            "email": "kkfurnir@hks.hr",
+            "url_stranice": "https://furnir.hr/",
+            "igrači": [{
+                "ime": "Duje",
+                "prezime": "Rađa",
+                "dob": 25,
+                "visina": 203,
+                "brojdresa": 21
+            }]
+        },
+        {
+            "nazivkluba": "Zadar",
+            "godinaosnutka": 1954,
+            "imedvorane": "Dvorana Krešimira Ćosića",
+            "adresa": "Splitska ul. 3",
+            "email": "kkzadar@hks.hr",
+            "url_stranice": "https://kkzadar.hr/",
+            "igrači": [{
+                "ime": "Luka",
+                "prezime": "Božić",
+                "dob": 29,
+                "visina": 206,
+                "brojdresa": 29
+            }]
+        },
+        {
+            "nazivkluba": "Zabok",
+            "godinaosnutka": 1998,
+            "imedvorane": "GSD Zabok",
+            "adresa": "Janka Tomića 1",
+            "email": "kkzabok@hks.hr",
+            "url_stranice": "https://kkzabok.hr/",
+            "igrači": [{
+                "ime": "Ivan",
+                "prezime": "Kučan",
+                "dob": 27,
+                "visina": 180,
+                "brojdresa": 4
+            },
+            {
+                "ime": "Jarviss",
+                "prezime": "Garrett",
+                "dob": 31,
+                "visina": 201,
+                "brojdresa": 17
+            }]
+        },
+        {
+            "nazivkluba": "Cedevita",
+            "godinaosnutka": 1976,
+            "imedvorane": "Dom Sportova",
+            "adresa": "Trg Krešimira Ćosića 11",
+            "email": "kkcedevita@hks.hr",
+            "url_stranice": "https://cedevita.hr/",
+            "igrači": [{
+                "ime": "Tomislav",
+                "prezime": "Petrović",
+                "dob": 37,
+                "visina": 202,
+                "brojdresa": 10
+            }]
+        },
+        {
+            "nazivkluba": "Gorica",
+            "godinaosnutka": 1977,
+            "imedvorane": "GSD Velika Gorica",
+            "adresa": "Rakarska ul. 19",
+            "email": "kkgorica@hks.hr",
+            "url_stranice": "https://gorica.hr/",
+            "igrači": [{
+                "ime": "Ivan",
+                "prezime": "Majcunić",
+                "dob": 24,
+                "visina": 194,
+                "brojdresa": 6
+            }]
+        },
+        {
+            "nazivkluba": "Bosco",
+            "godinaosnutka": 1999,
+            "imedvorane": "ŠSD Boško Božić Pepsi",
+            "adresa": "Trnsko ul. 21D",
+            "email": "kkbosco@hks.hr",
+            "url_stranice": "https://bosco.hr/",
+            "igrači": [{
+                "ime": "Luka",
+                "prezime": "Krajnović",
+                "dob": 18,
+                "visina": 196,
+                "brojdresa": 18
+            }]
+        },
+        {
+            "nazivkluba": "Škrljevo",
+            "godinaosnutka": 2001,
+            "imedvorane": "SD Mavrinci",
+            "adresa": "Mavrinci 19a",
+            "email": "kkskrljevo@hks.hr",
+            "url_stranice": "https://skrljevo.hr/",
+            "igrači": [{
+                "ime": "Josip",
+                "prezime": "Barnjak",
+                "dob": 24,
+                "visina": 190,
+                "brojdresa": 8
+            }]
+        }]
+    },
+    "examples": [
+        [{
+            "nazivkluba": "Alkar",
+            "godinaosnutka": 1967,
+            "imedvorane": "GŠD Ivica Glavan",
+            "adresa": "Put Piketa 25",
+            "email": "kkalkar@hks.hr",
+            "url_stranice": "https://alkar.hr/",
+            "igrači": [{
+                "ime": "Duje",
+                "prezime": "Putnik",
+                "dob": 21,
+                "visina": 203,
+                "brojdresa": 6
+            },
+            {
+                "ime": "Stipe",
+                "prezime": "Polutak",
+                "dob": 28,
+                "visina": 210,
+                "brojdresa": 10
+            }]
+        },
+        {
+            "nazivkluba": "Cibona",
+            "godinaosnutka": 1935,
+            "imedvorane": "Košarkaški centar Dražen Petrović",
+            "adresa": "Savska 30",
+            "email": "kkcibona@hks.hr",
+            "url_stranice": "https://www.cibona.com/",
+            "igrači": [{
+                "ime": "Krešimir",
+                "prezime": "Radovčić",
+                "dob": 23,
+                "visina": 188,
+                "brojdresa": 3
+            },
+            {
+                "ime": "Ivan",
+                "prezime": "Perasović",
+                "dob": 20,
+                "visina": 200,
+                "brojdresa": 6
+            }]
+        },
+        {
+            "nazivkluba": "Šibenka",
+            "godinaosnutka": 1972,
+            "imedvorane": "SD Baldekin",
+            "adresa": "Ulica Stjepana Radića 44",
+            "email": "kksibenkar@hks.hr",
+            "url_stranice": "https://sibenka.hr/",
+            "igrači": [{
+                "ime": "Juraj",
+                "prezime": "Pleadin",
+                "dob": 22,
+                "visina": 198,
+                "brojdresa": 7
+            },
+            {
+                "ime": "Frane",
+                "prezime": "Antić",
+                "dob": 32,
+                "visina": 205,
+                "brojdresa": 14
+            }]
+        },
+        {
+            "nazivkluba": "Furnir",
+            "godinaosnutka": 1994,
+            "imedvorane": "SD Dubrava",
+            "adresa": "Ul. Gjure Prejca 2",
+            "email": "kkfurnir@hks.hr",
+            "url_stranice": "https://furnir.hr/",
+            "igrači": [{
+                "ime": "Duje",
+                "prezime": "Rađa",
+                "dob": 25,
+                "visina": 203,
+                "brojdresa": 21
+            }]
+        },
+        {
+            "nazivkluba": "Zadar",
+            "godinaosnutka": 1954,
+            "imedvorane": "Dvorana Krešimira Ćosića",
+            "adresa": "Splitska ul. 3",
+            "email": "kkzadar@hks.hr",
+            "url_stranice": "https://kkzadar.hr/",
+            "igrači": [{
+                "ime": "Luka",
+                "prezime": "Božić",
+                "dob": 29,
+                "visina": 206,
+                "brojdresa": 29
+            }]
+        },
+        {
+            "nazivkluba": "Zabok",
+            "godinaosnutka": 1998,
+            "imedvorane": "GSD Zabok",
+            "adresa": "Janka Tomića 1",
+            "email": "kkzabok@hks.hr",
+            "url_stranice": "https://kkzabok.hr/",
+            "igrači": [{
+                "ime": "Ivan",
+                "prezime": "Kučan",
+                "dob": 27,
+                "visina": 180,
+                "brojdresa": 4
+            },
+            {
+                "ime": "Jarviss",
+                "prezime": "Garrett",
+                "dob": 31,
+                "visina": 201,
+                "brojdresa": 17
+            }]
+        },
+        {
+            "nazivkluba": "Cedevita",
+            "godinaosnutka": 1976,
+            "imedvorane": "Dom Sportova",
+            "adresa": "Trg Krešimira Ćosića 11",
+            "email": "kkcedevita@hks.hr",
+            "url_stranice": "https://cedevita.hr/",
+            "igrači": [{
+                "ime": "Tomislav",
+                "prezime": "Petrović",
+                "dob": 37,
+                "visina": 202,
+                "brojdresa": 10
+            }]
+        },
+        {
+            "nazivkluba": "Gorica",
+            "godinaosnutka": 1977,
+            "imedvorane": "GSD Velika Gorica",
+            "adresa": "Rakarska ul. 19",
+            "email": "kkgorica@hks.hr",
+            "url_stranice": "https://gorica.hr/",
+            "igrači": [{
+                "ime": "Ivan",
+                "prezime": "Majcunić",
+                "dob": 24,
+                "visina": 194,
+                "brojdresa": 6
+            }]
+        },
+        {
+            "nazivkluba": "Bosco",
+            "godinaosnutka": 1999,
+            "imedvorane": "ŠSD Boško Božić Pepsi",
+            "adresa": "Trnsko ul. 21D",
+            "email": "kkbosco@hks.hr",
+            "url_stranice": "https://bosco.hr/",
+            "igrači": [{
+                "ime": "Luka",
+                "prezime": "Krajnović",
+                "dob": 18,
+                "visina": 196,
+                "brojdresa": 18
+            }]
+        },
+        {
+            "nazivkluba": "Škrljevo",
+            "godinaosnutka": 2001,
+            "imedvorane": "SD Mavrinci",
+            "adresa": "Mavrinci 19a",
+            "email": "kkskrljevo@hks.hr",
+            "url_stranice": "https://skrljevo.hr/",
+            "igrači": [{
+                "ime": "Josip",
+                "prezime": "Barnjak",
+                "dob": 24,
+                "visina": 190,
+                "brojdresa": 8
+            }]
+        }]
+    ]
+}

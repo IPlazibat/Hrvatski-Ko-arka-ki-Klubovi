@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url('/images/basketball.jpg');
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+/* index.ejs home*/
+
+.content-title {
+    padding: 1vh;
+    margin: 5vh auto 0 auto;
+    font-size: 10vh;
+    font-weight: bold;
+    color: white;
+  }
+  
+  
+  .content-paragraph {
+    padding: 1vw;
+    margin: 5vh auto 0 auto;
+    font-size: 3vh;
+    color: white;
+  }
+  
+  .top-gap {
+    padding-top: 10vh;
+  }
+
+/* datatable.ejs */
+
+.App-navbar {
+    /* ff 3.6+ */
+    background: -moz-linear-gradient(90deg, rgba(238, 130, 238, 1) 19%, rgba(0, 0, 255, 1) 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background: -webkit-linear-gradient(90deg, rgba(238, 130, 238, 1) 19%, rgba(0, 0, 255, 1) 100%);
+  
+    /* opera 11.10+ */
+    background: -o-linear-gradient(90deg, rgba(238, 130, 238, 1) 19%, rgba(0, 0, 255, 1) 100%);
+  
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0000FF', endColorstr='#EE82EE', GradientType=0);
+  
+    /* ie 10+ */
+    background: -ms-linear-gradient(90deg, rgba(238, 130, 238, 1) 19%, rgba(0, 0, 255, 1) 100%);
+  
+    /* global 94%+ browsers support */
+    background: linear-gradient(90deg, rgba(238, 130, 238, 1) 19%, rgba(0, 0, 255, 1) 100%);
+  display: flex;
+  justify-content: right;
+  padding : 0.5rem;
+}
+
+.form {
+    max-width: 30rem;
+    margin: auto;
+    padding : 1rem;
+  }
+  
+  .datatable{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  table {
+    width: 100%;
+  }
+
+  th, td, tr {
+    background-color: #b407a9;
+    height: 70px;
+    text-align: center;
+    color: white;
+    border: 2px solid rgb(104, 0, 149) !important;
+  }
+  
+  label {
+    color: white;
+  }
