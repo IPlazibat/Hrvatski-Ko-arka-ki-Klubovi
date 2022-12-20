@@ -1,0 +1,303 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Hrvatski košarkaški klubovi",
+        "version": "3.0",
+        "contact": "ip53572@fer.hr",
+        "licence": "Creative Commons Zero v1.0 Universal"
+    },
+    "paths": {
+        "/getData": {
+            "get": {
+                "summary": "Dobavi sve podatke",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        nazivkluba: 'Alkar',
+                        godinaosnutka: 1967,
+                        imedvorane: 'GŠD Ivica Glavan',
+                        adresa: 'Put Piketa 25',
+                        email: 'kkalkar@hks.hr',
+                        url_stranice: 'https://alkar.hr/',
+                        ime: 'Duje',
+                        prezime: 'Putnik',
+                        visina: 203,
+                        dob: 21,
+                        brojdresa: 6
+                    }, {
+                        nazivkluba: 'Alkar',
+                        godinaosnutka: 1967,
+                        imedvorane: 'GŠD Ivica Glavan',
+                        adresa: 'Put Piketa 25',
+                        email: 'kkalkar@hks.hr',
+                        url_stranice: 'https://alkar.hr/',
+                        ime: 'Stipe',
+                        prezime: 'Polutak',
+                        visina: 210,
+                        dob: 28,
+                        brojdresa: 10
+                    }, {
+                        nazivkluba: 'Cibona',
+                        godinaosnutka: 1935,
+                        imedvorane: 'Košarkaški centar Dražen Petrović',
+                        adresa: 'Savska 30',
+                        email: 'kkcibona@hks.hr',
+                        url_stranice: 'https://www.cibona.com/',
+                        ime: 'Krešimir',
+                        prezime: 'Radovčić',
+                        visina: 188,
+                        dob: 23,
+                        brojdresa: 3
+                    }, {
+                        nazivkluba: 'Cibona',
+                        godinaosnutka: 1935,
+                        imedvorane: 'Košarkaški centar Dražen Petrović',
+                        adresa: 'Savska 30',
+                        email: 'kkcibona@hks.hr',
+                        url_stranice: 'https://www.cibona.com/',
+                        ime: 'Ivan',
+                        prezime: 'Perasović',
+                        visina: 200,
+                        dob: 20,
+                        brojdresa: 6
+                    }, {
+                        nazivkluba: 'Zabok',
+                        godinaosnutka: 1998,
+                        imedvorane: 'GSD Zabok',
+                        adresa: 'Janka Tomića 1',
+                        email: 'kkzabok@hks.hr',
+                        url_stranice: 'https://kkzabok.hr/',
+                        ime: 'Ivan',
+                        prezime: 'Kučan',
+                        visina: 180,
+                        dob: 27,
+                        brojdresa: 4
+                    }, {
+                        nazivkluba: 'Zabok',
+                        godinaosnutka: 1998,
+                        imedvorane: 'GSD Zabok',
+                        adresa: 'Janka Tomića 1',
+                        email: 'kkzabok@hks.hr',
+                        url_stranice: 'https://kkzabok.hr/',
+                        ime: 'Jarviss',
+                        prezime: 'Garrett',
+                        visina: 201,
+                        dob: 31,
+                        brojdresa: 17
+                    }, {
+                        nazivkluba: 'Šibenka',
+                        godinaosnutka: 1972,
+                        imedvorane: 'SD Baldekin',
+                        adresa: 'Ulica Stjepana Radića 44',
+                        email: 'kksibenkar@hks.hr',
+                        url_stranice: 'https://sibenka.hr/',
+                        ime: 'Juraj',
+                        prezime: 'Pleadin',
+                        visina: 198,
+                        dob: 22,
+                        brojdresa: 7
+                    }, {
+                        nazivkluba: 'Šibenka',
+                        godinaosnutka: 1972,
+                        imedvorane: 'SD Baldekin',
+                        adresa: 'Ulica Stjepana Radića 44',
+                        email: 'kksibenkar@hks.hr',
+                        url_stranice: 'https://sibenka.hr/',
+                        ime: 'Frane',
+                        prezime: 'Antić',
+                        visina: 205,
+                        dob: 32,
+                        brojdresa: 14
+                    }, {
+                        nazivkluba: 'Zadar',
+                        godinaosnutka: 1954,
+                        imedvorane: 'Dvorana Krešimira Ćosića',
+                        adresa: 'Splitska ul. 3',
+                        email: 'kkzadar@hks.hr',
+                        url_stranice: 'https://kkzadar.hr/',
+                        ime: 'Luka',
+                        prezime: 'Božić',
+                        visina: 206,
+                        dob: 29,
+                        brojdresa: 29
+                    }, {
+                        nazivkluba: 'Cedevita',
+                        godinaosnutka: 1976,
+                        imedvorane: 'Dom Sportova',
+                        adresa: 'Trg Krešimira Ćosića 11',
+                        email: 'kkcedevita@hks.hr',
+                        url_stranice: 'https://cedevita.hr/',
+                        ime: 'Tomislav',
+                        prezime: 'Petrović',
+                        visina: 202,
+                        dob: 37,
+                        brojdresa: 10
+                    }, {
+                        nazivkluba: 'Furnir',
+                        godinaosnutka: 1994,
+                        imedvorane: 'SD Dubrava',
+                        adresa: 'Ul. Gjure Prejca 2',
+                        email: 'kkfurnir@hks.hr',
+                        url_stranice: 'https://furnir.hr/',
+                        ime: 'Duje',
+                        prezime: 'Rađa',
+                        visina: 203,
+                        dob: 25,
+                        brojdresa: 21
+                    }, {
+                        nazivkluba: 'Gorica',
+                        godinaosnutka: 1977,
+                        imedvorane: 'GSD Velika Gorica',
+                        adresa: 'Rakarska ul. 19',
+                        email: 'kkgorica@hks.hr',
+                        url_stranice: 'https://gorica.hr/',
+                        ime: 'Ivan',
+                        prezime: 'Majcunić',
+                        visina: 194,
+                        dob: 24,
+                        brojdresa: 6
+                    }, {
+                        nazivkluba: 'Bosco',
+                        godinaosnutka: 1999,
+                        imedvorane: 'ŠSD Boško Božić Pepsi',
+                        adresa: 'Trnsko ul. 21D',
+                        email: 'kkbosco@hks.hr',
+                        url_stranice: 'https://bosco.hr/',
+                        ime: 'Luka',
+                        prezime: 'Krajnović',
+                        visina: 196,
+                        dob: 18,
+                        brojdresa: 18
+                    }, {
+                        nazivkluba: 'Škrljevo',
+                        godinaosnutka: 2001,
+                        imedvorane: 'SD Mavrinci',
+                        adresa: 'Mavrinci 19a',
+                        email: 'kkskrljevo@hks.hr',
+                        url_stranice: 'https://skrljevo.hr/',
+                        ime: 'Josip',
+                        prezime: 'Barnjak',
+                        visina: 190,
+                        dob: 24,
+                        brojdresa: 8
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        }
+        "//getData?nazivkluba=": {
+            "get": {
+                "summary": "Dobavi sve podatke sa traženim nazivom kluba",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "nazivKluba": "Nazivkluba"     
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        }
+        "/getData?imedvorane=": {
+            "get": {
+                "summary": "Dobavi sve podatke sa traženim imenom dvorane",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "imedvorane": "imedvorane"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        }
+        "/getData?adresa=": {
+            "get": {
+                "summary": "Dobavi sve podatke sa traženom adresom",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "adresa": "adresa"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        }
+        "/insertData": {
+            "post": {
+                "summary": "Ubaci podatke u bazu",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Resource"
+                        }
+                    },
+                    "400": {
+                        "description": "Error"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            }
+        } 
+    }
+}
