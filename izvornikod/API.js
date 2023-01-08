@@ -13,6 +13,12 @@ http.createServer(async (req,res)=>{
             res.end();
             return;
         }
+        if(req.url == "/getDataJson") {
+            res.writeHead(200,{'Content-Type': 'application/json'});
+            res.write();
+            res.end();
+            return;
+        }
         if(req.url == "/getData?nazivkluba=" + urlData.query.nazivkluba) {
             const rows = (await db.query('SELECT * FROM klub natural join igrač WHERE UPPER(klub.nazivkluba) LIKE \'%' + urlData.query.nazivkluba.toUpperCase() + '%\';')).rows;
             res.writeHead(200,{'Content-Type': 'application/json'});
@@ -37,20 +43,7 @@ http.createServer(async (req,res)=>{
     }
 
     if (req.method == 'POST'){
-        if(req.url == "/insertData") {
-            const data = req.body;
-            //{"nazivkluba" : "junak", "godinaosnutka":"1999","imedvorane":"ime1","adresa":"adresa1","email":"email1","url_stranice":"url1"}
-            res.writeHead(200,{'Content-Type': 'application/json'});
-            db.query("INSERT INTO klub (" + req.body.nazivkluba + ","+ req.body.godinaosnutka + ","+ req.body.imedvorane + ","+ req.body.adresa + ","+ req.body.email + ","+ req.body.url_stranice +")",data,(err,result) => {
-                if(err){
-                    res.write('Error');
-                }else{
-                    res.write(result);
-                }
-            })       
-            res.end();
-            return;
-        }
+
     }
 
     if (req.method == 'PUT'){
